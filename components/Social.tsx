@@ -1,4 +1,3 @@
-import { Icon } from "lucide-react";
 import Link from "next/link";
 
 import { FaGithub, FaLinkedin, FaYoutube, FaTwitter } from "react-icons/fa";

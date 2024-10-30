@@ -1,10 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
-import React, { useState } from "react";
+import { useState } from "react";
 
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import { Swiper, SwiperClass, SwiperSlide } from "swiper/react";
 
 import { BsArrowUpRight, BsGithub } from "react-icons/bs";
 
@@ -15,9 +15,9 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-import Link from "next/link";
-import Image from "next/image";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
+import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
   {
@@ -58,7 +58,7 @@ const projects = [
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
 
-  const handleSlideChange = (swiper: { activeIndex: any }) => {
+  const handleSlideChange = (swiper: SwiperClass) => {
     // get current slide index
     const currentIndex = swiper.activeIndex;
     // update project state based on current slide index
@@ -175,7 +175,7 @@ const Work = () => {
               <WorkSliderBtns
                 containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
                 btnStyles="bg-accent-default hover:bg-accent-hover text-black text-[22px] w=[44px] h-[44px] flex justify-center items-center transition-all "
-                iconsStyles={undefined}
+                iconsStyles={""}
               />
             </Swiper>
           </div>
